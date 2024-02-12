@@ -8,6 +8,8 @@ function triangleCalculate() {
     if (isNaN(area)) {
         const errorText = document.getElementById('error');
         errorText.style.display='block'
+        const areaResult = document.getElementById('areaResult');
+        areaResult.innerText = '';
         errorText.innerText = 'Please put a Number'
     }
     if (!isNaN(area)) {
