@@ -1,20 +1,24 @@
-document.getElementById('btn-parallelogram').addEventListener('click',function(){
-    const parallelogramBase= document.getElementById('parallelogram-base').value;
-    const parallelogramBaseInt = parseFloat(parallelogramBase);
-    const parallelogramHeight= document.getElementById('parallelogram-height').value;
-    const parallelogramHeightInt = parseFloat(parallelogramHeight);
-    const area = parallelogramBaseInt * parallelogramHeightInt;
-    if(isNaN(area)){
-        const errorText = document.getElementById('error3');
-        errorText.style.display='block'
-        const areaResult = document.getElementById('areaResult3');
-        areaResult.innerText = '';
-        errorText.innerText = 'Please put a Number'
-    }
-    if(!isNaN(area)){
-        const errorText = document.getElementById('error3');
-        errorText.style.display='none';
-        const areaResult = document.getElementById('areaResult3');
-        areaResult.innerText = area;
-    }
+document.getElementById('btn-parallelogram').addEventListener('click', function () {
+    const parallelogramBase = document.getElementById('parallelogram-base');
+    const parallelogramHeight = document.getElementById('parallelogram-height');
+    const errorText = document.getElementById('error3');
+    const areaResult = document.getElementById('areaResult3');
+    commonMultiply(parallelogramBase, parallelogramHeight, errorText, areaResult);
 });
+
+
+function commonMultiply(p1, p2, p3, p4) {
+    const item1 = parseFloat(p1.value);
+    const item2 = parseFloat(p2.value);
+    const totalArea = item1 * item2;
+    const area = parseFloat(totalArea.toFixed(2));
+    if (isNaN(area)) {
+        return (p3.style.display = 'block',
+            p4.innerText = '',
+            p3.innerText = 'Please put a Number');
+    }
+    if (!isNaN(area)) {
+        return (p3.style.display = 'none',
+            p4.innerText = area);
+    }
+}

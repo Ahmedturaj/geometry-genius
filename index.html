@@ -16,9 +16,9 @@
     </header>
     <main>
         <!-- main contain container -->
-        <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col md:flex-row gap-5">
             <!-- Shape container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- triangle card -->
                 <div class="card  bg-base-100 shadow-2xl">
                     <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
@@ -86,8 +86,7 @@
                         <div class="flex gap-2">
                             <input type="text" id="rhombus-d1" placeholder="d1" class="px-1 rounded w-full">
                             <span>cm</span>
-                            <input type="text" name="" id="rhombus-d2" placeholder="d2"
-                                class="px-1 rounded w-full">
+                            <input type="text" name="" id="rhombus-d2" placeholder="d2" class="px-1 rounded w-full">
                             <span>cm</span>
                         </div>
                         <p id="error4" class="text-red-600 italic"></p>
@@ -97,10 +96,48 @@
                         </div>
                     </div>
                 </div>
+                <!-- pentagon -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/pentagon.png" alt="pentagon" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A) = 0.5 x p x b</p>
+                        <div class="flex gap-2">
+                            <input type="text" id="pentagon-p" placeholder="p" class="px-1 rounded w-full">
+                            <span>cm</span>
+                            <input type="text" name="" id="pentagon-b" placeholder="b" class="px-1 rounded w-full">
+                            <span>cm</span>
+                        </div>
+                        <p id="error5" class="text-red-600 italic"></p>
+                        <p>Area: <span id="areaResult5"></span><span>cm<sup>2</sup></span></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full mt-5" id="btn-pentagon">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Ellipse" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = π<small>ab</small></p>
+                        <div class="flex gap-2">
+                            <input type="text" id="ellipse-a" placeholder="a" class="px-1 rounded w-full">
+                            <span>cm</span>
+                            <input type="text" name="" id="ellipse-b" placeholder="b" class="px-1 rounded w-full">
+                            <span>cm</span>
+                        </div>
+                        <p id="error6" class="text-red-600 italic"></p>
+                        <p>Area: <span id="areaResult6"></span><span>cm<sup>2</sup></span></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full mt-5" id="btn-ellipse">Calculate</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- area calculation container -->
             <div class="w-96 border-2 border-gray-700 rounded-md ">
-                <h3 class="text-4xl p-5 text-center">Area calculation.</h3>
+                <h3 class="text-4xl p-5 text-center underline">Area calculation.</h3>
             </div>
         </div>
     </main>
@@ -111,6 +148,10 @@
     <script src="./js/parallelogram-calculation.js"></script>
     <!-- rhombus -->
     <script src="./js/rhombus-calculation.js"></script>
+    <!-- pentagon -->
+    <script src="./js/pentagon-calculation.js"></script>
+    <!-- ellipse -->
+    <script src="./js/elleipse-calculation.js"></script>
 </body>
 
 </html>

@@ -1,29 +1,28 @@
-document.getElementById('btn-rhombus').addEventListener('click', function(){
-    multiplyByHalf('rhombus-d1', 'rhombus-d2', 'error4', 'areaResult4');
-})
-
-// {
-//     const rhombusD1 = document.getElementById('rhombus-d1').value;
-//     const intRhombusD1 = parseFloat(rhombusD1);
-//     const rhombusD2 = document.getElementById('rhombus-d2').value;
-//     const intRhombusD2 = parseFloat(rhombusD2);
-//     const totalArea = 0.5 * intRhombusD1 * intRhombusD2;
-//     const area =parseFloat(totalArea.toFixed(2));
-//     console.log(area);
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+    multiplyByHalf('pentagon-p', 'pentagon-b', 'error5','areaResult5');
+});
+ 
+//   {  const pentagonP = document.getElementById('pentagon-p').value;
+//     const intPentagonP = parseFloat(pentagonP);
+//     const pentagonB = document.getElementById('pentagon-b').value;
+//     const intPentagonB = parseFloat(pentagonB);
+//     const totalArea = 0.5 * intPentagonP * intPentagonB;
+//     const area = parseFloat(totalArea.toFixed(2));
 //     if (isNaN(area)) {
-//         const errorText = document.getElementById('error4');
+//         const errorText = document.getElementById('error5');
 //         errorText.style.display = 'block'
-//         const areaResult = document.getElementById('C);
+//         const areaResult = document.getElementById('areaResult5');
 //         areaResult.innerText = '';
 //         errorText.innerText = 'Please put a Number'
 //     }
 //     if (!isNaN(area)) {
-//         const errorText = document.getElementById('error4');
+//         const errorText = document.getElementById('error5');
 //         errorText.style.display = 'none';
-//         const areaResult = document.getElementById('areaResult4');
+//         const areaResult = document.getElementById('areaResult5');
 //         areaResult.innerText = area;
 //     }
 // })
+
 
 function multiplyByHalf(p1, p2, p3, p4) {
     const item1 = document.getElementById(p1);
